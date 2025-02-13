@@ -1,0 +1,250 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+	;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Light'; 
+  background: linear-gradient(to bottom, black, gray);
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Add this for better visual hierarchy */
+.navbar-brand img {
+  filter: grayscale(100%) contrast(120%);
+  transition: filter 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  filter: grayscale(80%) contrast(150%);
+}
+
+.hero {
+	padding-top: 120px;
+	text-align: center;
+}
+
+.hero h1 {
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+.hero-title {
+	font-size: 3rem;
+	margin-bottom: 40px;
+}
+
+.btn-custom {
+	background: linear-gradient(145deg, gray, orange);
+	/* background-color: orange !important; */
+	border: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+.btn-custom:hover {
+	opacity: 0.9;
+}
+
+.card-container {
+	perspective: 1000px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.card {
+	background: #212529;
+	border: none;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	text-align: left;
+	border-radius: 10px;
+	position: relative;
+	overflow: visible;
+}
+
+.card img {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	top: -75px;
+	left: 50%;
+	transform: translateZ(75px);
+	transform-style: preserve-3d;
+	z-index: 3;
+}
+
+.card-container:hover .card {
+	transform: none;
+}
+
+.balanced-text {
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.wide-dropdown {
+	width: 800px;
+	left: 50%;
+	transform: translateX(-30%);
+}
+
+.dropdown-item:hover {
+	background-color: #212529;
+}
+
+.big-text {
+	font-size: 1.5em;
+}
+
+.huge-text {
+	font-size: 2em;
+}
+
+#side_img {
+	width: 180 px;
+	height: 530px;
+	transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+	transform-style: preserve-3d;
+}
+
+.card .img-small {
+	width: 125px;
+	height: 105px;
+	position: absolute;
+	top: auto;
+	bottom: -45px;
+	right: 0;
+	transform: translateZ(75px);
+	transform-style: preserve-3d;
+	z-index: 3;
+}
+
+.carousel {
+	width: 100%;
+	max-width: auto;
+	margin: 0 auto;
+}
+
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel-item {
+	display: none;
+	width: 100%;
+	transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+	display: block;
+}
+
+.card {
+	background-color: #343a40;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev, .carousel-control-next {
+	width: 5%;
+	color: #fff;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	opacity: 1;
+}
+
+.card.salary-card.active {
+	background: linear-gradient(to left, #0a0a0a, #0f1a26) !important;
+	transition: background 0.3s ease;
+}
+
+.salary-card:hover {
+	transition: background 0.3s ease;
+}
+
+.salary-card {
+	cursor: pointer;
+}
+
+.card {
+	transition: transform 0.2s ease;
+	height: 100%;
+	width: 100%;
+}
+
+.salary-card:hover .card {
+	transform: scale(1.05);
+}
+
+.triangle-card .card {
+  height: 200px;
+  /* background: linear-gradient(135deg, gray, rgba(0, 0, 0, 0.8)); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.triangle-card1 .card:before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2)); /* Fade from white to light white */
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.triangle-card .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.triangle-card  a {
+  color: Helvetica Light; /* Soft light blue text */
+}
+header{
+	margin-top: 50px;
+	min-height: 100vh;	
+}
+.text-success{
+	color: orange !important;
+}
+.btn-outline-light{
+	color: orange !important;
+}
